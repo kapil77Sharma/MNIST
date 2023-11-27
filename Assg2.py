@@ -186,7 +186,7 @@ elif selected_page == "Model":
 
     # Display a single example image
 
-    file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/Gify.gif", "rb")
+    file_ = open("Gify.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
