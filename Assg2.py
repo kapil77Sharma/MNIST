@@ -507,7 +507,7 @@ elif selected_page == "Number of Epochs Variation":
   
 
 # Open and read the image file
-    file_path = "/Users/kapilsharma/Desktop/Kapil/Vizuara/ClownJuggle.gif"
+    file_path = "ClownJuggle.gif"
     with open(file_path, "rb") as file:
     contents = file.read()
     data_url = base64.b64encode(contents).decode("utf-8")
