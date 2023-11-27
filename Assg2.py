@@ -491,7 +491,7 @@ elif selected_page == "Number of Epochs Variation":
         
         """, unsafe_allow_html=True)
 
-    file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/ClownJuggle.gif", "rb")
+    file_ = open("ClownJuggle.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
