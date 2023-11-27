@@ -635,6 +635,27 @@ elif selected_page == "Training Data Size Variation":
 
         Imagine you're preparing for a super exciting treasure hunt with your friends. The more clues (data) you have to practice with, the better you'll be at finding the treasure when the real hunt begins. 🗺️✨
 
+          </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/mystery.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
+
+    
+      st.markdown(
+        """
+        <div style="text-align: justify;">
+
         In our computer adventure, training data is like all the practice clues you use to become a treasure hunt expert. The computer looks at lots and lots of examples to learn and understand the patterns in the data. It's like practicing your treasure hunt skills with various clues, so when the real adventure (testing) comes, you'll be ready!
 
         Now, testing data is like the real treasure hunt. It's the moment of truth! After practicing with all those clues (training data), the computer is tested with new, unseen examples to check if it can find the treasure accurately. It's like using your well-practiced skills in the actual treasure hunt to see if you can find the hidden treasures!
@@ -644,6 +665,7 @@ elif selected_page == "Training Data Size Variation":
         """,
         unsafe_allow_html=True
     )
+    
 
 
 
