@@ -242,7 +242,7 @@ elif selected_page == "Model":
     import base64
 
     """### Neural Network Animation """
-    file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/Assignment/ANN.gif", "rb")
+    file_ = open("ANN.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
