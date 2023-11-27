@@ -496,7 +496,7 @@ elif selected_page == "Number of Epochs Variation":
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
     # Set the desired width for the image
-    image_width = 700
+    image_width = 800
 
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
@@ -731,6 +731,8 @@ elif selected_page == "Learning Rate Variation":
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
+    image_width = 800
+
 
     st.markdown(
         f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
