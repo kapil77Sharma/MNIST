@@ -553,33 +553,37 @@ elif selected_page == "Training Data Size Variation":
     # Training Data Section
     st.subheader("Training Data:")
     st.markdown(
-        """
-        <div style="text-align: justify;">
-            - **Purpose:** The training data is used to train or teach the machine learning model. 
-              It consists of a set of examples with known inputs and corresponding outputs. 
-              The model learns the patterns and relationships within the data during the training process.
-            - **Usage:** The model uses the training data to adjust its internal parameters and optimize its performance. 
-              The goal is for the model to generalize well to new, unseen data.
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    """
+    <div style="text-align: justify;">
+        - <strong>Purpose:</strong> The training data is used to train or teach the machine learning model. 
+          It consists of a set of examples with known inputs and corresponding outputs. 
+          The model learns the patterns and relationships within the data during the training process.
+        <br>
+        - <strong>Usage:</strong> The model uses the training data to adjust its internal parameters and optimize its performance. 
+          The goal is for the model to generalize well to new, unseen data.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
     # Test Data Section
     st.subheader("Test Data:")
     st.markdown(
-        """
-        <div style="text-align: justify;">
-            - **Purpose:** The test data is used to evaluate the performance of the trained model. 
-              It consists of examples that the model has not seen during the training phase. 
-              The test data helps assess how well the model can make predictions on new, unseen instances.
-            - **Usage:** After the model has been trained, it is applied to the test data, 
-              and its predictions are compared to the actual (known) outputs. 
-              This evaluation provides insights into how well the model is likely to perform on new, real-world data.
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    """
+    <div style="text-align: justify;">
+        - <strong>Purpose:</strong> The test data is used to evaluate the performance of the trained model. 
+          It consists of examples that the model has not seen during the training phase. 
+          The test data helps assess how well the model can make predictions on new, unseen instances.
+        <br>
+        - <strong>Usage:</strong> After the model has been trained, it is applied to the test data, 
+          and its predictions are compared to the actual (known) outputs. 
+          This evaluation provides insights into how well the model is likely to perform on new, real-world data.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
     # Key Points Section
     st.subheader("Key Points:")
