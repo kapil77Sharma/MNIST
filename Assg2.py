@@ -639,9 +639,7 @@ elif selected_page == "Training Data Size Variation":
         """,
         unsafe_allow_html=True
     )
-
-
-file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/mystery.gif", "rb")
+    file_ = open("mystery.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
@@ -651,7 +649,9 @@ file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/mystery.gif", "rb")
         unsafe_allow_html=True,
     )
 
-    
+
+
+
       st.markdown(
         """
         <div style="text-align: justify;">
