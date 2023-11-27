@@ -332,7 +332,6 @@ elif selected_page == "Model":
     # Add more content here or create additional sections as needed
 
     ##  ##
-   ## st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/mnist.WebP", caption=" MNIST Neural Network ", width=700)
 
     ###
 
