@@ -723,7 +723,7 @@ elif selected_page == "Learning Rate Variation":
                 """, unsafe_allow_html=True)
 
 
-     file_ = open("learningrate.gif", "rb")
+    file_ = open("learningrate.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
