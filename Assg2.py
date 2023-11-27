@@ -714,12 +714,24 @@ elif selected_page == "Learning Rate Variation":
     st.write("""
                     <p style='text-align: justify;'>In the magical world of training our computer friend, learning rate is like the speed at which our computer friend learns during its training adventure.
                     Imagine you're riding a magical bike, and the learning rate is how fast or slow you pedal. If you pedal too fast, you might miss the details of the path, and if you pedal too slow, it might take forever to reach your destination. 🚴💨
+                    """, unsafe_allow_html=True)
+    st.write("""
                     <p style='text-align: justify;'>In our computer adventure, learning rate works the same way. We want to find the perfect balance so our computer friend learns efficiently and accurately. Too fast or too slow might lead to unexpected results!
     A learning rate that is too large can cause the model to converge too quickly to a suboptimal solution, whereas a learning rate that is too small can cause the process to get stuck
     So, let's experiment with different learning rates and see how they affect our model's learning journey. Hold on tight, and let's pedal into the world of learning rates! 🌟🚴‍♂️</p>
                     
                 """, unsafe_allow_html=True)
 
+
+     file_ = open("learningrate.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
 
 
     activation_function = 'relu'
