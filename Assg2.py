@@ -322,7 +322,7 @@ elif selected_page == "Model":
     graph.render('neural_network_architecture', format='png', cleanup=True, view=False)
 
     # Display the graph image
-   ## st.image('neural_network_architecture.png')
+    st.image('neural_network_architecture.png')
 
     # Display details for layers with colors
     st.subheader("Details for Each Layer")
