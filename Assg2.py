@@ -336,7 +336,6 @@ elif selected_page == "Model":
     
 
     # Add more content here or create additional sections as needed
-    import streamlit as st
 import random
 
 # Streamlit app
