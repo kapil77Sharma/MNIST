@@ -490,19 +490,9 @@ elif selected_page == "Number of Epochs Variation":
     st.title("MNIST Model Evaluation - Number of Epochs Variation")
 
     st.write("""
-    <style>
-        .justify-text {
-            text-align: justify;
-            margin-bottom: 10px;  /* Adjust the margin as needed */
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-    st.write("""
         <p class='justify-text'>Imagine you're learning a new magic trick each day. An epoch is like a day of practice for your computer friend. 🧙‍♂️✨</p>
         <p class='justify-text'>So, let's say you're learning how to juggle. On the first day (that's one epoch!), you practice and get a bit better. The second day (another epoch!), you practice again, and you're even more amazing at juggling. You keep doing this for several days (epochs!) until you become a juggling master!</p>
     """, unsafe_allow_html=True)
-
 
 
     file_ = open("ClownJuggle.gif", "rb")
@@ -520,22 +510,6 @@ elif selected_page == "Number of Epochs Variation":
      """,
          unsafe_allow_html=True,
      )
-
-    st.write("""
-    <style>
-        .justify-text {
-            text-align: justify;
-            margin-bottom: 10px;  /* Adjust the margin as needed */
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
-  
-
-
-
-
 
     st.write("""
         <p style='text-align: justify;'>Similarly, when our computer friend is learning something cool, like recognizing handwritten numbers, it also practices for a few 'epochs.' Each epoch is like a day of learning and getting better at the task.</p>
