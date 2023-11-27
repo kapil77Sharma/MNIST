@@ -521,7 +521,7 @@ elif selected_page == "Number of Epochs Variation":
          unsafe_allow_html=True,
      )
 
-     st.write("""
+    st.write("""
     <style>
         .justify-text {
             text-align: justify;
