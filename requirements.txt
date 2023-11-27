@@ -10,6 +10,8 @@ streamlit_drawable_canvas==0.9.3
 tensorflow==2.14.0
 diGraph==0.1.4
 graphviz==0.20.1
+pygraphviz==1.7
+
 
 
 
