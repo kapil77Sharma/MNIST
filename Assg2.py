@@ -122,7 +122,7 @@ elif selected_page == "MNIST_dataset":
         unsafe_allow_html=True
     )
 
-    st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/E.png", caption="Sample", use_column_width=True)
+    st.image("E.png", caption="Sample", use_column_width=True)
 
     st.markdown(
         """
