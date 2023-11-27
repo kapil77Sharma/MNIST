@@ -269,8 +269,10 @@ elif selected_page == "Model":
         unsafe_allow_html=True
     )
 
+    '''
     import random
     from graphviz import Digraph
+    
 
 
     # Define a list of activation functions
@@ -330,12 +332,15 @@ elif selected_page == "Model":
     st.subheader("Details for Each Layer")
     for layer, _, color in model_layers:
         st.markdown(f'<font color="{color}">{layer}</font>', unsafe_allow_html=True)
+'''
+    
 
     # Add more content here or create additional sections as needed
+  
 
     ##  ##
 
-    ###
+ 
 
 
 
