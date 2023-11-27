@@ -795,15 +795,7 @@ elif selected_page == "Learning Rate Variation":
     plt.legend()
     st.pyplot(fig_lr)
 
-    # Plot loss over epochs for learning rate variation
-    st.subheader(f"Loss Over Epochs (Learning Rate Variation - {selected_learning_rate} Learning Rate)")
-    fig_loss_lr = plt.figure()
-    plt.plot(history_lr.history['loss'], label='Training Loss')
-    plt.plot(history_lr.history['val_loss'], label='Validation Loss')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.legend()
-    st.pyplot(fig_loss_lr)
+   
     st.write("""
                 <p style='text-align: justify;'>The learning rate is a hyperparameter that determines the size of the steps taken during the optimization process. It plays a crucial role in the convergence and stability of the training process.
 When the learning rate is too high, such as in your case with 0.5, the optimization algorithm might overshoot the minimum of the loss function. In other words, the steps taken during training are so large that the algorithm might miss the optimal values and bounce around, preventing convergence. This can lead to divergence, where the loss increases instead of decreasing.</p>
