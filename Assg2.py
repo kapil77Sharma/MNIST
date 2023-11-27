@@ -923,15 +923,7 @@ elif selected_page == "Optimizer Variation":
     plt.legend()
     st.pyplot(fig_optimizer)
 
-    # Plot loss over epochs for optimizer variation
-    st.subheader(f"Loss Over Epochs (Optimizer Variation - {selected_optimizer} Optimizer)")
-    fig_loss_optimizer = plt.figure()
-    plt.plot(history_optimizer.history['loss'], label='Training Loss')
-    plt.plot(history_optimizer.history['val_loss'], label='Validation Loss')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.legend()
-    st.pyplot(fig_loss_optimizer)
+
 
 # Page 9: Learning Rate Variation
 
