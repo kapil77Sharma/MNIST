@@ -652,7 +652,7 @@ elif selected_page == "Training Data Size Variation":
 
 
 
-      st.markdown(
+    st.markdown(
         """
         <div style="text-align: justify;">
 
