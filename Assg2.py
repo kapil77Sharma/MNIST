@@ -488,6 +488,21 @@ elif selected_page == "Number of Epochs Variation":
     st.write("""
         <p style='text-align: justify;'>Imagine you're learning a new magic trick each day. An epoch is like a day of practice for your computer friend. 🧙‍♂️✨</p>
         <p style='text-align: justify;'>So, let's say you're learning how to juggle. On the first day (that's one epoch!), you practice and get a bit better. The second day (another epoch!), you practice again, and you're even more amazing at juggling. You keep doing this for several days (epochs!) until you become a juggling master!</p>
+        
+        """, unsafe_allow_html=True)
+
+    file_ = open("/Users/kapilsharma/Desktop/Kapil/Vizuara/ClownJuggle.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+
+    st.markdown(
+        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        unsafe_allow_html=True,
+    )
+
+
+    st.write("""
         <p style='text-align: justify;'>Similarly, when our computer friend is learning something cool, like recognizing handwritten numbers, it also practices for a few 'epochs.' Each epoch is like a day of learning and getting better at the task.</p>
         <p style='text-align: justify;'>Just like you with your magic tricks, the more epochs the computer has, the better it becomes at recognizing numbers. It's like giving your computer friend more chances to become a superhero in understanding what the numbers are! 🌟✨</p>
         <p style='text-align: justify;'>So, when you see 'Number of Epochs' in our magic computer learning adventure, think of it as the number of days our computer friend practices its magic to become super awesome at recognizing numbers! 🌟✨</p>
