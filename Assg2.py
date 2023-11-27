@@ -504,6 +504,29 @@ elif selected_page == "Number of Epochs Variation":
     )
 
 
+  
+
+# Open and read the image file
+    file_path = "/Users/kapilsharma/Desktop/Kapil/Vizuara/ClownJuggle.gif"
+    with open(file_path, "rb") as file:
+    contents = file.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+
+# Set the desired width for the image
+    image_width = 800
+
+# Center-align the image using HTML and CSS
+    st.markdown(
+    f"""
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="data:image/gif;base64,{data_url}" alt="Clown Juggle" width="{image_width}">
+    </div>
+    """,
+    unsafe_allow_html=True,
+    )
+
+
+
     st.write("""
         <p style='text-align: justify;'>Similarly, when our computer friend is learning something cool, like recognizing handwritten numbers, it also practices for a few 'epochs.' Each epoch is like a day of learning and getting better at the task.</p>
         <p style='text-align: justify;'>Just like you with your magic tricks, the more epochs the computer has, the better it becomes at recognizing numbers. It's like giving your computer friend more chances to become a superhero in understanding what the numbers are! 🌟✨</p>
