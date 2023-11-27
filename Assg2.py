@@ -491,17 +491,7 @@ elif selected_page == "Number of Epochs Variation":
         
         """, unsafe_allow_html=True)
 
-    file_ = open("ClownJuggle.gif", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-    # Set the desired width for the image
-    image_width = 800
 
-    st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-        unsafe_allow_html=True,
-    )
 
     file_ = open("ClownJuggle.gif", "rb")
     contents = file_.read()
@@ -674,6 +664,26 @@ elif selected_page == "Training Data Size Variation":
         f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
         unsafe_allow_html=True,
     )
+
+    # Open and read the image file
+    file_path = "mystery.gif"
+    with open(file_path, "rb") as file:
+        contents = file.read()
+        data_url = base64.b64encode(contents).decode("utf-8")
+
+    # Set the desired width for the image
+    image_width = 800
+
+    # Center-align the image using HTML and CSS
+    st.markdown(
+        f"""
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="data:image/gif;base64,{data_url}" alt="Mystery GIF" width="{image_width}">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
 
 
 
