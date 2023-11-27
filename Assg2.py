@@ -269,123 +269,60 @@ elif selected_page == "Model":
         unsafe_allow_html=True
     )
 
-    '''
-    import random
-    from graphviz import Digraph
+
     
 
+    # Add more content here or create additional sections as needed    
+    import random
 
-    # Define a list of activation functions
-    activation_functions = ['relu', 'sigmoid', 'tanh', 'elu', 'selu']
-
-    # Page title and introduction
+# Streamlit app
     st.title("🎨 Neural Network Playground")
     st.markdown(
         "Welcome to the **Neural Network Playground**! Let's create a neural network together. "
-        "You can choose the number of hidden layers and their activation functions. Let the creativity flow!"
+        "You can choose the number of hidden layers, and we'll visualize the architecture."    
     )
-
-    # User input for the number of hidden layers
-    num_hidden_layers = st.slider("🔍 Select Number of Hidden Layers", min_value=1, max_value=10, value=3)
-
-    # Build the neural network layers
-    model_layers = []
-    model_layers.append(('Input Layer\n784 neurons', 784, ''))  # Input layer
-
-    # Hidden layers
-    for i in range(num_hidden_layers):
-        # Randomly select an activation function for each hidden layer
-        activation_function = random.choice(activation_functions)
-        color = "#{:06x}".format(random.randint(0, 0xFFFFFF))  # Generate a random color
-        model_layers.append(
-            (f'Hidden Layer {i + 1}\n128 neurons\n{activation_function.capitalize()} activation', 128, color))
-
-    model_layers.append(('Output Layer\nSoftmax activation\n10 neurons', 10, '#86c7f3'))  # Output layer
-
-    # Display the model architecture
-    st.subheader("🧠 Neural Network Architecture")
-
-    # Create a Graphviz graph with LR (left-to-right) direction
-    graph = Digraph(comment='Neural Network Architecture', format='png', engine='dot',
-                    graph_attr={'rankdir': 'TB', 'ranksep': '1'})
-
-    # Add nodes to the graph with colors and labels for layers 0 and 6
-    for i, (_, neurons, color) in enumerate(model_layers):
-        label = f'Layer {i}'
-        if i == 0:
-            label = 'Input (Layer 0)'
-        elif i == len(model_layers) - 1:
-            label = 'Output (Layer 6)'
-        graph.node(str(neurons), label, shape='rect', style='filled', fillcolor=color, fontcolor='black')
-
-    # Add edges to the graph
-    for i in range(len(model_layers) - 1):
-        graph.edge(str(model_layers[i][1]), str(model_layers[i + 1][1]), color=model_layers[i + 1][2])
-
-    # Save the graph as an image
-    graph.render('neural_network_architecture', format='png', cleanup=True, view=False)
-
-    # Display the graph image
-    st.image('neural_network_architecture.png')
-
-    # Display details for layers with colors
-    st.subheader("Details for Each Layer")
-    for layer, _, color in model_layers:
-        st.markdown(f'<font color="{color}">{layer}</font>', unsafe_allow_html=True)
-'''
-    
-
-    # Add more content here or create additional sections as needed
-import random
-
-# Streamlit app
-st.title("🎨 Neural Network Playground")
-st.markdown(
-    "Welcome to the **Neural Network Playground**! Let's create a neural network together. "
-    "You can choose the number of hidden layers, and we'll visualize the architecture."
-)
 
 # User input for the number of hidden layers
-num_hidden_layers = st.slider(
-    "🔍 Select Number of Hidden Layers",
-    key="num_hidden_layers",  # Add a unique key to resolve the DuplicateWidgetID error
-    min_value=1,
-    max_value=10,
-    value=3
-)
+    num_hidden_layers = st.slider(
+        "🔍 Select Number of Hidden Layers",
+        key="num_hidden_layers",  # Add a unique key to resolve the DuplicateWidgetID error
+        min_value=1,
+        max_value=10,
+        value=3
+    )
 
 # Build the neural network layers
-model_layers = []
-model_layers.append(('Input Layer\n784 neurons', 784))  # Input layer
+    model_layers = []
+    model_layers.append(('Input Layer\n784 neurons', 784))  # Input layer
 
 # Hidden layers
-for i in range(num_hidden_layers):
-    num_neurons = st.slider(
-        f"🔍 Select Number of Neurons in Hidden Layer {i + 1}",
-        key=f"num_neurons_{i}",  # Add a unique key for each slider
-        min_value=1,
-        max_value=256,
-        value=128
-    )
-    activation_functions = ['relu', 'sigmoid', 'tanh', 'elu', 'selu']
-    activation_function = random.choice(activation_functions)
-    model_layers.append(
-        (f'Hidden Layer {i + 1}\n{num_neurons} neurons\n{activation_function.capitalize()} activation', num_neurons)
-    )
+    for i in range(num_hidden_layers):
+        num_neurons = st.slider(
+            f"🔍 Select Number of Neurons in Hidden Layer {i + 1}",
+            key=f"num_neurons_{i}",  # Add a unique key for each slider
+            min_value=1,
+            max_value=256,
+            value=128
+        )
+        activation_functions = ['relu', 'sigmoid', 'tanh', 'elu', 'selu']
+        activation_function = random.choice(activation_functions)
+        model_layers.append(
+            (f'Hidden Layer {i + 1}\n{num_neurons} neurons\n{activation_function.capitalize()} activation', num_neurons)
+        )
 
-model_layers.append(('Output Layer\nSoftmax activation\n10 neurons', 10))  # Output layer
+    model_layers.append(('Output Layer\nSoftmax activation\n10 neurons', 10))  # Output layer
 
 # Display the model architecture
-st.subheader("🧠 Neural Network Architecture")
+    st.subheader("🧠 Neural Network Architecture")
 
 # Display details for each layer
-for layer, neurons in model_layers:
-    st.text(f"Layer: {layer}")
+    for layer, neurons in model_layers:
+        st.text(f"Layer: {layer}")
 
 # Additional visualization (you can customize this based on your needs)
-st.subheader("Visual Representation:")
-for i, (_, neurons) in enumerate(model_layers):
-    st.markdown(f"Layer {i} | Neurons: {neurons}")
+    st.subheader("Visual Representation:")
+    for i, (_, neurons) in enumerate(model_layers):
+        st.markdown(f"Layer {i} | Neurons: {neurons}")
 
 # Note: You can enhance the visualization based on your specific requirements.
 
