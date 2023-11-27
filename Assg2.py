@@ -288,7 +288,7 @@ elif selected_page == "Model":
         key="num_hidden_layers",  # Add a unique key to resolve the DuplicateWidgetID error
         min_value=1,
         max_value=10,
-        value=3
+        value=1
     )
 
 # Build the neural network layers
