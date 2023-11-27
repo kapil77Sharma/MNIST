@@ -653,18 +653,6 @@ elif selected_page == "Training Data Size Variation":
         """,
         unsafe_allow_html=True
     )
-    file_ = open("mystery.gif", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-    # Set the desired width for the image
-    image_width = 800
-
-    st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-        unsafe_allow_html=True,
-    )
-
     # Open and read the image file
     file_path = "mystery.gif"
     with open(file_path, "rb") as file:
@@ -757,21 +745,23 @@ elif selected_page == "Learning Rate Variation":
     So, let's experiment with different learning rates and see how they affect our model's learning journey. Hold on tight, and let's pedal into the world of learning rates! 🌟🚴‍♂️</p>
                     
                 """, unsafe_allow_html=True)
+                
+    file_path = "learningrate.gif"
+    with open(file_path, "rb") as file:
+        contents = file.read()
+        data_url = base64.b64encode(contents).decode("utf-8")
 
-
-    file_ = open("learningrate.gif", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
     image_width = 800
 
-
     st.markdown(
-        f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+        f"""
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <img src="data:image/gif;base64,{data_url}" alt="Learning Rate GIF" width="{image_width}">
+        </div>
+        """,
         unsafe_allow_html=True,
     )
-
-
+    
     activation_function = 'relu'
     epochs = 5
     data_size = 48000
