@@ -214,7 +214,7 @@ elif selected_page == "Model":
 
     # Continue with the rest of your Streamlit code...
 
-    st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/neuron.png", caption="Biological and an Artificial Neuron", width=700)
+    st.image("neuron.png", caption="Biological and an Artificial Neuron", width=700)
 
 
     st.markdown(
@@ -381,14 +381,14 @@ elif selected_page == "Activation Function Variation":
     col1, col2 = st.columns(2)
 
     # Linear Function Image
-    col1.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/Linear.png", caption="Linear function: linear motion",
+    col1.image("Linear.png", caption="Linear function: linear motion",
                width=320)
 
     # Add some space between images
     col1.text("")
 
     # Non-linear Function Image
-    col2.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/NonLinear.png",
+    col2.image("NonLinear.png",
                caption="Non-linear function: Accelerated Motion", width=300)
 
     st.markdown(
@@ -410,11 +410,11 @@ elif selected_page == "Activation Function Variation":
         unsafe_allow_html=True
     )
 
-    st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/L1.png", caption="Linear function: Accelerated Motion",
+    st.image("L1.png", caption="Linear function: Accelerated Motion",
              width=500)
-    st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/L0.png", caption="Non-linear function: Accelerated Motion",
+    st.image("L0.png", caption="Non-linear function: Accelerated Motion",
              width=800)
-    st.image("/Users/kapilsharma/Desktop/Kapil/Vizuara/L6.png", caption="Non-linear function: Accelerated Motion",
+    st.image("L6.png", caption="Non-linear function: Accelerated Motion",
              width=500)
 
     st.markdown(
