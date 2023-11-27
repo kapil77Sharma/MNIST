@@ -493,7 +493,7 @@ elif selected_page == "Number of Epochs Variation":
     <style>
         .justify-text {
             text-align: justify;
-            margin-bottom: 100px;  /* Adjust the margin as needed */
+            margin-bottom: 10px;  /* Adjust the margin as needed */
         }
     </style>
 """, unsafe_allow_html=True)
@@ -520,6 +520,15 @@ elif selected_page == "Number of Epochs Variation":
      """,
          unsafe_allow_html=True,
      )
+
+     st.write("""
+    <style>
+        .justify-text {
+            text-align: justify;
+            margin-bottom: 10px;  /* Adjust the margin as needed */
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 
   
