@@ -12,6 +12,8 @@ import pandas as pd
 
 
 
+
+
 # Load MNIST dataset
 (X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
 
@@ -270,6 +272,8 @@ elif selected_page == "Model":
     import streamlit as st
     import random
     from graphviz import Digraph
+    graph = Digraph(graph_attr={'rankdir': 'LR'}, format='png', engine='dot', executable='/Users/kapilsharma/anaconda3/bin/dot')
+
 
     # Define a list of activation functions
     activation_functions = ['relu', 'sigmoid', 'tanh', 'elu', 'selu']
